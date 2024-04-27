@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "xpyvent"
+version = "0.1.0"
+description = "In our Python Flask MVC application, the entry point `app.py` sets up the Flask application and imports routes from `routes.py`, which maps URL paths such as `/event/display` to `event_display_controller.py` and `/event/upload` to `event_upload_controller.py`. `event_display_controller.py` retrieves event data from `event_model.py`, which utilizes `event_dao.py` for ORM-based database operations through SQLAlchemy, and renders responses using templates like `event_display_view.html` with the Jinja2 templating engine. Conversely, `event_upload_controller.py` processes data submitted through `event_form_view.html`, also managed by `event_model.py` that handles data validation and saving. `EventDTO.py` is used to pass structured data between controllers and models, ensuring a clean data flow. Frontend interactions are managed by JavaScript files such as `event_display.js` for dynamic content updates and `event_form.js` for AJAX-based form submissions. The visual styling is consistently applied through a single CSS file, `style.css`, which styles the Jinja2 templates to ensure a uniform user interface. This adaptation maintains a clear separation of concerns with a Pythonic approach to web application architecture, integrating Flask for routing and controllers, SQLAlchemy for database interaction, and Jinja2 for rendering views, all orchestrated within the versatile and dynamic environment of Python."
+authors = ["AutoGPT <info@agpt.co>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+bcrypt = "^3.2.0"
+fastapi = "^0.78.0"
+passlib = "^1.7.4"
+prisma = "*"
+pydantic = "*"
+uvicorn = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
